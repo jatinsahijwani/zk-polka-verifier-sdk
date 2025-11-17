@@ -1,4 +1,4 @@
-# zk-polka-sdk 🧙‍♂️✨
+# zk-polkavm-sdk 🧙‍♂️✨
 
 **Write Circom. Compile. Deploy. Verify — all on PolkaVM.**
 
@@ -21,7 +21,7 @@ A zero-setup toolkit to build, deploy, and verify ZK circuits using Circom — w
 Install globally (recommended for CLI usage):
 
 ```bash
-npm install -g zk-polka-sdk
+npm install -g zk-polkavm-sdk
 ```
 
 ⚡ Usage
@@ -29,7 +29,7 @@ npm install -g zk-polka-sdk
 ### ✅ Compile Circom circuit
 
 ```bash
-npx zk-polka-sdk compile <path-to-your-circom-file>
+npx zk-polkavm-sdk compile <path-to-your-circom-file>
 ```
 
 This command:
@@ -42,7 +42,7 @@ This command:
 ### ✅ Test Compiled Circom Circuit
 
 ```bash
-npx zk-polka-sdk test <path-to-generated-folder> <path-to-input.json>
+npx zk-polkavm-sdk test <path-to-generated-folder> <path-to-input.json>
 ```
 
 This command:
@@ -56,7 +56,7 @@ This command:
 ### ✅ Deploy Compiled Circom Circuit
 
 ```bash
-npx zk-polka-sdk deploy <path-to-generated-folder> <PRIVATE_KEY_OF_WALLET>
+npx zk-polkavm-sdk deploy <path-to-generated-folder> <PRIVATE_KEY_OF_WALLET>
 ```
 
 This command:
@@ -71,7 +71,7 @@ This command:
 You can verify a proof directly using a single function call.
 
 ```js
-const { verifyProof } = require("zk-polka-sdk");
+const { verifyProof } = require("zk-polkavm-sdk");
 
 const result = await verifyProof({
   input: {
@@ -94,9 +94,9 @@ console.log(result ? "✅ Valid proof" : "❌ Invalid proof");
 
 | Command                                       | Description                                      |
 |----------------------------------------------|--------------------------------------------------|
-| `npx zk-polka-sdk compile <path-to-circuit>` | Compiles the `.circom` file and runs Groth16 setup |
-| `npx zk-polka-sdk test <output-folder> <path-to-input.json>` | Tests the Circom logic locally using ZK Proofs        |
-| `npx zk-polka-sdk deploy <output-folder> <private-key>` | Deploys the verifier contract to PolkaVM        |
+| `npx zk-polkvm-sdk compile <path-to-circuit>` | Compiles the `.circom` file and runs Groth16 setup |
+| `npx zk-polkavm-sdk test <output-folder> <path-to-input.json>` | Tests the Circom logic locally using ZK Proofs        |
+| `npx zk-polkavm-sdk deploy <output-folder> <private-key>` | Deploys the verifier contract to PolkaVM        |
 | `verifyProof(input,"<relative-path-to-output-folder>")` *(programmatic only)* | Generates proof and verifies it on-chain using deployed contract |
 
 

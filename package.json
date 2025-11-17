@@ -1,6 +1,6 @@
 {
-  "name": "zk-polka-sdk",
-  "version": "1.0.14",
+  "name": "zk-polkavm-sdk",
+  "version": "1.0.0",
   "description": "A zero-knowledge proof SDK for compiling Circom circuits and deploying Solidity verifiers to PolkaVM.",
   "main": "./bin/index.js",
   "bin": {
